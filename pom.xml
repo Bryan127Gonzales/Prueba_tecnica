@@ -71,13 +71,6 @@
             <version>3.0.0</version>
         </dependency>
 
-        <!-- TODO: Agregar las dependencias que necesites -->
-        <!-- Sugerencias:
-             - spring-boot-starter-data-jpa (para JPA/Hibernate)
-             - spring-boot-starter-validation (para validaciones)
-             - lombok (para reducir código boilerplate)
-        -->
-
     </dependencies>
 
     <build>

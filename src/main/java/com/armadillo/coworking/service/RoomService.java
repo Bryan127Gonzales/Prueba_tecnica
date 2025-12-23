@@ -62,19 +62,7 @@ public class RoomService {
                     .filter(r -> r.getStatus() == roomStatus)
                     .toList();
         }
-
-        /*// Filtro por disponibilidad en fecha/hora
-        if (dateTime != null && !dateTime.isBlank()) {
-            LocalDateTime date = LocalDateTime.parse(dateTime);
-
-            rooms = rooms.stream()
-                    .filter(room ->
-                            !bookingRepository.existsByRoomAndDate(
-                                    room.getId(), date
-                            )
-                    )
-                    .toList();
-        }*/
+        
 
         return rooms.stream()
                 .map(this::mapToResponse)

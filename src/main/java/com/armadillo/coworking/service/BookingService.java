@@ -84,14 +84,14 @@ public class BookingService {
 
         List<Booking> bookings = bookingRepository.findAll();
 
-        // 🔹 Filtro por sala
+        //Filtro por sala
         if (roomId != null) {
             bookings = bookings.stream()
                     .filter(b -> b.getRoom().getId().equals(roomId))
                     .toList();
         }
 
-        // 🔹 Filtro por responsable
+        //Filtro por responsable
         if (responsible != null && !responsible.isBlank()) {
             bookings = bookings.stream()
                     .filter(b ->
@@ -102,7 +102,7 @@ public class BookingService {
                     .toList();
         }
 
-        // 🔹 Filtro por fecha (YYYY-MM-DD)
+        //Filtro por fecha (YYYY-MM-DD)
         if (date != null && !date.isBlank()) {
             LocalDate filterDate = LocalDate.parse(date);
 
