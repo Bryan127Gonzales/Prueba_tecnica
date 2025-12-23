@@ -62,7 +62,7 @@ public class RoomService {
                     .filter(r -> r.getStatus() == roomStatus)
                     .toList();
         }
-        
+
 
         return rooms.stream()
                 .map(this::mapToResponse)
