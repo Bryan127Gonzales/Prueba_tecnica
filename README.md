@@ -82,7 +82,7 @@ La aplicación debería ejecutarse en `http://localhost:8081`.
 
 - #### Estado de las salas (ENUM)
 
-El campo **status** de una sala utiliza un tipo **ENUM**, por lo que **los valores deben enviarse obligatoriamente en mayúsculas**.
+El campo **status** de una sala(rooms) utiliza un tipo **ENUM**, por lo que **los valores deben enviarse obligatoriamente en mayúsculas**.
 
 Valores permitidos:
 - `DISPONIBLE`
