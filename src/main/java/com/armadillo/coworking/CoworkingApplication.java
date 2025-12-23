@@ -16,6 +16,6 @@ public class CoworkingApplication {
 
         SpringApplication.run(CoworkingApplication.class, args);
         System.out.println("Sistema de Reserva de Salas - Armadillo Coworking");
-        System.out.println("API REST ejecutándose en http://localhost:8080");
+        System.out.println("API REST ejecutándose en http://localhost:8081");
     }
 }
