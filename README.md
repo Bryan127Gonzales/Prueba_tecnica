@@ -12,7 +12,7 @@ Permite la gestión de recursos mediante endpoints HTTP siguiendo buenas prácti
 
 ## Tecnologías y versiones
 
-- **Java:** 17
+- **Java:** 21
 - **Spring Boot:** 3.5.9
 - **PostgreSQL:** 18.1
 - **Build Tool:** Maven
@@ -128,7 +128,7 @@ Enviar un valor distinto o en minúsculas producirá un error de validación.
 ### Eliminar una sala:
 - **Método:** DELETE
 - http://localhost:8081/api/rooms/1
-- **Cambiar el id "2" por el que exista.**
+- **Cambiar el id "1" por el que exista.**
 
 ## 2. Gestión de Reservas
 
@@ -170,14 +170,14 @@ Enviar un valor distinto o en minúsculas producirá un error de validación.
 - Cambiar el id "1" por el que exista.
 
 ### Consultar disponibilidad de una sala en un rango de fecha/hora
-- **Método:** DELETE
+- **Método:** GET
 - `api/{idrooms}/availability?start=fecha-hora&end=fecha-hora`
 - http://localhost:8081/api/rooms/2/availability?start=2025-12-26T11%3A00&end=2025-12-26T17%3A00
 - Rango: 2025-12-26 -> Hora: 11:00-17:00
 - Cambiar idrooms (Ejm: 2)
 - Para los tiempos se utilizo el separador "%3A" que corresponde al carácter ":" (dos puntos).
 - Formato de tiempo: 2025-12-26T11%3A00
-- 
+
 ## 3. Validaciones
 - Una sala NO puede tener reservas superpuestas(dos reservas al mismo tiempo)
   `POST /api/bookings`
@@ -200,8 +200,8 @@ Enviar un valor distinto o en minúsculas producirá un error de validación.
       "roomId": 2,
       "responsibleName": "Prueba Conflicto",
       "contactEmail": "conflicto@mail.com",
-      "startTime": "2025-12-26T10:00",
-      "endTime": "2025-12-26T11:30",
+      "startTime": "2025-12-26T15:00",
+      "endTime": "2025-12-26T14:00",
       "purpose": "Reserva superpuesta"
       }
     ```
